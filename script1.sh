@@ -1,16 +1,10 @@
-#!/bin/bash
-# Script 1: System Identity Report
-# Author: Vijay | Course: Open Source Software
-# --- Variables ---
 STUDENT_NAME="Vijay"
 SOFTWARE_CHOICE="Git"
-# --- System info ---
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
 UPTIME=$(uptime -p)
 DATE=$(date)
 DISTRO=$(cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"')
-# --- Display ---
 echo "======================================="
 echo " Open Source Audit — $STUDENT_NAME"
 echo "======================================="
