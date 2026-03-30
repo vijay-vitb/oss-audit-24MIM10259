@@ -1,10 +1,6 @@
-#!/bin/bash
-# Script 2: FOSS Package Inspector
-# Author: Vijay | Course: Open Source Software
 PACKAGE="git"
 echo "Checking package: $PACKAGE"
 echo "----------------------------"
-# Check if package is installed (Debian-based systems)
 if dpkg -l | grep -qw $PACKAGE; then
     echo "$PACKAGE is installed."
     dpkg -s $PACKAGE | grep -E 'Version|Maintainer|Description'
@@ -14,7 +10,6 @@ fi
 echo ""
 echo "Package Description:"
 echo "----------------------------"
-# Case statement for description
 case $PACKAGE in
     git)
         echo "Git: A distributed version control system that enables collaboration and tracks changes in code."
