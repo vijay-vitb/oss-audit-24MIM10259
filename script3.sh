@@ -1,6 +1,3 @@
-#!/bin/bash
-# Script 3: Disk and Permission Auditor
-# Author: Vijay | Course: Open Source Software
 DIRS=("/etc" "/var/log" "/home" "/usr/bin" "/tmp")
 echo "Directory Audit Report"
 echo "----------------------"
@@ -15,7 +12,6 @@ for DIR in "${DIRS[@]}"; do
 done
 echo ""
 echo "Checking Git configuration directory..."
-# Check Git config directory
 if [ -d "$HOME/.git" ]; then
     PERMS=$(ls -ld $HOME/.git | awk '{print $1, $3, $4}')
     echo ".git directory => Permissions: $PERMS"
